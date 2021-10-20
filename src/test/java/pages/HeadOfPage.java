@@ -24,7 +24,7 @@ public class HeadOfPage extends BasePage {
     private Button aboutCompanyButton(){ return new Button(browsersService, about_company);}
 
     // action
-
+    public WebElement getAboutCompany(){ return browsersService.getDriver().findElement(about_company);}
     public void aboutCompanyButtonClick(){ aboutCompanyButton().click();}
 //    protected WebElement getAboutCompany(){ return browsersService.getDriver().findElement(about_company);}
 //    public void clickAboutCompany(){getAboutCompany().click();}

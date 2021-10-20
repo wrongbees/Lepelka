@@ -1,6 +1,6 @@
 package wrappers.dropdown;
 
-import BaseEntities.BasePage;
+
 import core.BrowsersService;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -26,6 +26,7 @@ public abstract class Dropdown {
     }
 
     public void selectByText(String text){
+        displayDropdown();
         By by_element = By.xpath(String.format(element_for_search,text));
         UIElement element = new UIElement(browsersService, by_element);
         element.click();

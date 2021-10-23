@@ -7,12 +7,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.HeadOfPage;
 
-public class HistoryOfDevelopmentPage extends HeadOfPage {
+public class CertificatePage extends HeadOfPage {
 
-    private final static String ENDPOINT = "/istoriya-razvitiya/";
+    private final static String ENDPOINT = "/type-gallery/sertifikaty/";
     private final static By TITLE = By.xpath("//span[@class='elipse']//b");
 
-    public HistoryOfDevelopmentPage(BrowsersService browsersService, boolean openPageByURL) {
+    public CertificatePage(BrowsersService browsersService, boolean openPageByURL) {
         super(browsersService, openPageByURL);
     }
 

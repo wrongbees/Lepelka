@@ -7,15 +7,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.HeadOfPage;
 
-public class HistoryOfDevelopmentPage extends HeadOfPage {
-
-    private final static String ENDPOINT = "/istoriya-razvitiya/";
+public class BrandedTradePage extends HeadOfPage {
+    private final static String ENDPOINT = "/firmennaya-torgovlya/";
     private final static By TITLE = By.xpath("//span[@class='elipse']//b");
 
-    public HistoryOfDevelopmentPage(BrowsersService browsersService, boolean openPageByURL) {
+    public BrandedTradePage(BrowsersService browsersService, boolean openPageByURL) {
         super(browsersService, openPageByURL);
     }
-
     @Override
     protected void openPage() {
         browsersService.getDriver().get(ReadProperties.getInstance().getURL()+ENDPOINT);

@@ -7,12 +7,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.HeadOfPage;
 
-public class HistoryOfDevelopmentPage extends HeadOfPage {
+public class SurveyPage extends HeadOfPage {
 
-    private final static String ENDPOINT = "/istoriya-razvitiya/";
+    private final static String ENDPOINT = "/opros/";
     private final static By TITLE = By.xpath("//span[@class='elipse']//b");
 
-    public HistoryOfDevelopmentPage(BrowsersService browsersService, boolean openPageByURL) {
+    public SurveyPage(BrowsersService browsersService, boolean openPageByURL) {
         super(browsersService, openPageByURL);
     }
 
@@ -29,7 +29,6 @@ public class HistoryOfDevelopmentPage extends HeadOfPage {
             return false;
         }
     }
-
     private WebElement getTitle(){ return browsersService.getDriver().findElement(TITLE);}
 
     public String getTitleText(){

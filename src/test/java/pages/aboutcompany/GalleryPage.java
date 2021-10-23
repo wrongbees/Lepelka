@@ -7,14 +7,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.HeadOfPage;
 
-public class HistoryOfDevelopmentPage extends HeadOfPage {
-
-    private final static String ENDPOINT = "/istoriya-razvitiya/";
+public class GalleryPage extends HeadOfPage {
+    private final static String ENDPOINT = "/type-gallery/fotogalereya/";
     private final static By TITLE = By.xpath("//span[@class='elipse']//b");
-
-    public HistoryOfDevelopmentPage(BrowsersService browsersService, boolean openPageByURL) {
-        super(browsersService, openPageByURL);
-    }
 
     @Override
     protected void openPage() {
@@ -28,6 +23,10 @@ public class HistoryOfDevelopmentPage extends HeadOfPage {
         }catch (NoSuchElementException ex){
             return false;
         }
+    }
+
+    public GalleryPage(BrowsersService browsersService, boolean openPageByURL) {
+        super(browsersService, openPageByURL);
     }
 
     private WebElement getTitle(){ return browsersService.getDriver().findElement(TITLE);}
